@@ -1,14 +1,4 @@
-import sys
+from emp import calculate_gross_salary
 
-def calculate_gross_salary(basic_salary):
-    hra = basic_salary * 0.20
-    da = basic_salary * 0.10
-    gross_salary = basic_salary + hra + da
-
-    print("Basic Salary =", basic_salary)
-    print("HRA =", hra)
-    print("DA =", da)
-    print("Gross Salary =", gross_salary)
-
-basic_salary = float(sys.argv[1])
-calculate_gross_salary(basic_salary)
+def test_calculate_gross_salary():
+    assert calculate_gross_salary(50000) == 65000
